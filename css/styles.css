@@ -1,0 +1,178 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+
+/* ----- Fuente ----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+/* ----- Variables ----- */
+:root{
+    /* ### Colores primarios */
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    
+    /* ### Colores neutrales */
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --white: #FFFFFF;
+    --bg-card-whyus: hsl(179, 47%, 52%);
+    /* ### Tipografia */
+    --fz: 16px;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body{
+    font-family: 'Karla', sans-serif;
+    font-size:var(--fz);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light-Gray);
+    
+}
+
+.container{
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px -10px var(--Grayish-Blue);
+}
+
+/* Titles h2, h3 and p */
+.card_titles{
+    background-color: var(--white);
+    padding: 20px 40px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card_titles h2{
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.card_titles h3{
+    color: var(--Bright-Yellow);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.card_titles p{
+    color: var(--Grayish-Blue);
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+/* Card Footer */
+.card_login{
+    padding: 20px 40px;
+    background-color: var(--Cyan);
+    
+    color: var(--white);
+}
+
+.card_login h4{
+    color: var(--white);
+    font-size: 18px;
+}
+
+.card_login span:nth-child(2){
+    font-size: 33px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.card_login span:nth-child(3){
+    font-size: 15px;
+    font-weight: 400;
+    opacity: .5;
+}
+
+.card_login p{
+    opacity: .8;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    border-radius:10px;
+    border: 2px transparent rgba(0, 0, 0, 0.507);
+    background-color: var(--Bright-Yellow);
+    box-shadow: 0px 0px 10px -5px black;
+    color: var(--white);
+    font-weight: 700;
+    transition: all ease .3s;
+    margin-bottom: 10px;
+}
+
+button:hover{
+    background-color: var(--white);
+    color: black;
+    
+}
+
+/* Card Why us */
+.card_whyus{
+    padding: 20px 40px;
+    background-color: var(--bg-card-whyus);
+    border-radius: 0px 0px 10px 10px;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.card_whyus h4{
+    font-size: 18px;
+}
+.card_whyus p{
+    width: 80%;
+    line-height: 25px;
+    color: var(--Light-Gray);
+    opacity: .8;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 920px) {
+    .container{
+        width: 50%;
+    }
+
+    .card_titles h2{
+        font-size:30px;
+    }
+    .card_titles h3{
+        font-size:25px;
+    }
+
+    .card_titles p{
+        font-size: 18px;
+    }
+    .card_footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card_login{
+        border-radius: 0px 0px 0px 10px;
+    }
+
+    .card_whyus{
+        border-radius: 0px 0px 10px 0px;
+        overflow: visible;
+    }
+}
